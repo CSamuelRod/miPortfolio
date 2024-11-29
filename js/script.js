@@ -1,5 +1,5 @@
 // Inicializa EmailJS con tu Public Key
-emailjs.init("ktOWdFGJb6FBKNzz7"); // Reemplaza con tu Public Key de EmailJS
+emailjs.init("k7BHvG2Hq26c2ixz8"); // Reemplaza con tu Public Key de EmailJS
 
 // Maneja el envío del formulario
 document.getElementById("contact-form").addEventListener("submit", function (e) {
@@ -10,15 +10,16 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     formStatus.innerText = "Enviando mensaje...";
 
     // Captura los valores del formulario
-    const name = document.getElementById("name").value;
+    const from_name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
     // Configura los parámetros para la plantilla
     const templateParams = {
-        name: name,
+        from_name: from_name,
         email: email,
         message: message,
+        to_name: "Samuel", // Puedes reemplazar esto con el nombre del destinatario si lo deseas
     };
 
     // Enviar el correo usando EmailJS
