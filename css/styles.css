@@ -15,7 +15,7 @@ body {
     left: 0; /* Alinea la barra a la izquierda */
     right: 0; /* Alinea la barra a la derecha */
     background-color: #ffffff;
-    padding: 1rem;
+    padding: 0.5rem; /* Reducir padding para móviles */
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     justify-content: center;
@@ -27,8 +27,9 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 2rem;
+    gap: 1rem; /* Reducir espacio entre enlaces */
 }
+
 .navbar a {
     text-decoration: none;
     color: #0078d4;
@@ -145,7 +146,6 @@ form button:hover {
     color: #333;
 }
 
-
 .sidebar h3 {
     color: #0056a6;
 }
@@ -193,8 +193,7 @@ footer {
     }
 
     .sidebar {
-        top: 60px; /* Cambiar según la altura de la navbar en móviles */
-        height: calc(100% - 60px); /* Ajustar altura también */
+        display: none; /* Ocultar la barra lateral en móviles */
     }
 
     .section {
@@ -230,5 +229,6 @@ footer {
 
     .sidebar {
         width: 200px; /* Ajustar el ancho de la barra lateral */
+        display: block; /* Asegurarse de que se muestre en tabletas */
     }
 }
