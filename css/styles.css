@@ -10,12 +10,18 @@ body {
 
 /* Navegación */
 .navbar {
+    position: fixed; /* Fija la barra de navegación */
+    top: 0; /* Alinea la barra en la parte superior */
+    left: 0; /* Alinea la barra a la izquierda */
+    right: 0; /* Alinea la barra a la derecha */
     background-color: #ffffff;
     padding: 1rem;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     justify-content: center;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
+
 .navbar ul {
     list-style: none;
     margin: 0;
@@ -27,6 +33,11 @@ body {
     text-decoration: none;
     color: #0078d4;
     font-weight: bold;
+}
+
+/* Ajustar el contenido principal para que no quede oculto por la navbar */
+main {
+    margin-top: 70px; /* Ajusta este valor según la altura de tu navbar */
 }
 
 /* Secciones */
@@ -125,14 +136,16 @@ form button:hover {
 .sidebar {
     background-color: #f3f3f3;
     padding: 1.5rem;
-    position: fixed;
+    position: fixed; /* Mantiene la barra lateral fija */
     left: 0;
-    top: 0;
+    top: 70px; /* Ajusta este valor a la altura de tu navbar */
     width: 250px;
-    height: 100%;
+    height: calc(100% - 70px); /* Ajusta la altura para que no se superponga a la barra de navegación */
     box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
     color: #333;
 }
+
+
 .sidebar h3 {
     color: #0056a6;
 }
@@ -180,9 +193,8 @@ footer {
     }
 
     .sidebar {
-        position: static; /* Cambiar a estático para evitar el desplazamiento */
-        width: 100%; /* Tomar el ancho completo */
-        box-shadow: none; /* Eliminar sombra en dispositivos móviles */
+        top: 60px; /* Cambiar según la altura de la navbar en móviles */
+        height: calc(100% - 60px); /* Ajustar altura también */
     }
 
     .section {
@@ -212,28 +224,11 @@ footer {
 /* Media Query para tabletas (pantallas entre 768px y 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .navbar ul {
-        flex-direction: row; /* Mantener en fila para tabletas */
-        justify-content: center; /* Centrar la navegación */
+        flex-direction: row; /* Mantener fila para navegación */
+        justify-content: space-around; /* Espaciado entre enlaces */
     }
 
     .sidebar {
-        position: fixed; /* Mantener la barra lateral fija */
-        width: 200px; /* Ajustar ancho de la barra lateral */
-        height: 100%; /* Mantener altura completa */
-    }
-
-    .section {
-        padding: 2rem 1rem; /* Ajustar padding */
-    }
-}
-
-/* Media Query para pantallas más grandes */
-@media (min-width: 1024px) {
-    .sidebar {
-        width: 250px; /* Ancho normal de la barra lateral en pantallas grandes */
-    }
-
-    .section {
-        max-width: 800px; /* Mantener el ancho máximo para secciones */
+        width: 200px; /* Ajustar el ancho de la barra lateral */
     }
 }
