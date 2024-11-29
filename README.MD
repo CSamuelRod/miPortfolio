@@ -23,7 +23,7 @@ Este sitio web es una recopilación de mi experiencia, habilidades y proyectos d
 🖥️ Vista Previa
 
 Puedes visitar mi portafolio en el siguiente enlace:
-🔗 TuPortafolio.com (o el link de GitHub Pages si lo usas: https://tuusuario.github.io/mi-portfolio)
+🔗 https://csamuelrod.github.io/miPortfolio/
 
 
 (Añade aquí una captura de pantalla o elimina esta sección si no es relevante.)
@@ -41,23 +41,14 @@ Si deseas descargar este proyecto y ejecutarlo localmente:
 
     Clona este repositorio:
 
-    git clone https://github.com/tuusuario/mi-portfolio.git
+    git clone https://csamuelrod.github.io/miPortfolio/
 
     Abre el archivo index.html en tu navegador.
 
-🌟 Proyectos Destacados
-📌 Nombre del Proyecto 1
-
-Breve descripción del proyecto: tecnologías utilizadas, propósito y un enlace al repositorio o demo en vivo.
-📌 Nombre del Proyecto 2
-
-Breve descripción del proyecto: tecnologías utilizadas, propósito y un enlace al repositorio o demo en vivo.
-
-(Añade tantos proyectos como desees.)
 📞 Contacto
 
-    Email: tuemail@example.com
-    LinkedIn: linkedin.com/in/tuusuario
-    GitHub: github.com/tuusuario
+    Email: samuel.rodpal@gmail.com
+    LinkedIn: www.linkedin.com/in/carlos-samuel-rodriguez-palomino
+    GitHub: github.com/csamuelrod
 
 ¡Gracias por visitar mi portafolio! 🎉
