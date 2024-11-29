@@ -1,52 +1,35 @@
-// Configuración de Firebase
-const firebaseConfig = {
-    apiKey: "TU_API_KEY",
-    authDomain: "TU_AUTH_DOMAIN",
-    databaseURL: "TU_DATABASE_URL",
-    projectId: "TU_PROJECT_ID",
-    storageBucket: "TU_STORAGE_BUCKET",
-    messagingSenderId: "TU_MESSAGING_SENDER_ID",
-    appId: "TU_APP_ID"
-};
+// Inicializa EmailJS con tu Public Key
+emailjs.init("ktOWdFGJb6FBKNzz7"); // Reemplaza con tu Public Key de EmailJS
 
-// Inicializar Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const database = firebase.database(app);
+// Maneja el envío del formulario
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Evita el comportamiento por defecto del formulario
 
-// Manejo del Formulario
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contact-form");
+    // Muestra un mensaje de estado inicial
     const formStatus = document.getElementById("form-status");
+    formStatus.innerText = "Enviando mensaje...";
 
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // Prevenir envío estándar del formulario
+    // Captura los valores del formulario
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-        // Recoger datos
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+    // Configura los parámetros para la plantilla
+    const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+    };
 
-        // Guardar datos en Firebase
-        try {
-            const newMessageRef = firebase.database().ref("messages").push();
-            await newMessageRef.set({
-                name,
-                email,
-                message,
-                timestamp: new Date().toISOString()
-            });
-
-            // Mostrar mensaje de éxito
-            formStatus.textContent = "Mensaje enviado con éxito. ¡Gracias!";
-            formStatus.style.color = "green";
-
-            // Limpiar formulario
-            form.reset();
-        } catch (error) {
-            // Mostrar error
-            formStatus.textContent = "Hubo un error al enviar el mensaje. Inténtalo de nuevo.";
-            formStatus.style.color = "red";
-            console.error("Error:", error);
-        }
-    });
+    // Enviar el correo usando EmailJS
+    emailjs.send("service_ok6tkmm", "template_mevefb9", templateParams)
+        .then(function (response) {
+            console.log("Correo enviado exitosamente!", response.status, response.text);
+            formStatus.innerText = "¡Mensaje enviado exitosamente! 🎉";
+            document.getElementById("contact-form").reset(); // Reinicia el formulario
+        })
+        .catch(function (error) {
+            console.error("Error al enviar el mensaje:", error);
+            formStatus.innerText = "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.";
+        });
 });

@@ -10,16 +10,16 @@ body {
 
 /* Navegación */
 .navbar {
-    position: fixed; /* Fija la barra de navegación */
-    top: 0; /* Alinea la barra en la parte superior */
-    left: 0; /* Alinea la barra a la izquierda */
-    right: 0; /* Alinea la barra a la derecha */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: #ffffff;
-    padding: 0.5rem; /* Reducir padding para móviles */
+    padding: 0.5rem;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     justify-content: center;
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 .navbar ul {
@@ -27,7 +27,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1rem; /* Reducir espacio entre enlaces */
+    gap: 1rem;
 }
 
 .navbar a {
@@ -38,7 +38,7 @@ body {
 
 /* Ajustar el contenido principal para que no quede oculto por la navbar */
 main {
-    margin-top: 70px; /* Ajusta este valor según la altura de tu navbar */
+    margin-top: 70px;
 }
 
 /* Secciones */
@@ -51,10 +51,12 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .section h2 {
     margin-top: 0;
     color: #0056a6;
 }
+
 .section ul {
     list-style: none;
     padding: 0;
@@ -64,40 +66,40 @@ main {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* Espaciado entre ítems */
+    gap: 1rem;
     padding: 0;
 }
 
 .skills-list li {
-    background-color: #e6f7ff; /* Color de fondo ligero */
+    background-color: #e6f7ff;
     border-radius: 4px;
     padding: 0.5rem 1rem;
     display: flex;
-    align-items: center; /* Centrar icono verticalmente */
+    align-items: center;
 }
 
 .skills-list li i {
-    margin-right: 0.5rem; /* Espacio entre icono y texto */
+    margin-right: 0.5rem;
 }
 
 /* Habilidades Blandas */
 .soft-skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* Espaciado entre ítems */
+    gap: 1rem;
     padding: 0;
 }
 
 .soft-skills-list li {
-    background-color: #ffe6e6; /* Color de fondo ligero para habilidades blandas */
+    background-color: #ffe6e6;
     border-radius: 4px;
     padding: 0.5rem 1rem;
     display: flex;
-    align-items: center; /* Centrar icono verticalmente */
+    align-items: center;
 }
 
 .soft-skills-list li i {
-    margin-right: 0.5rem; /* Espacio entre icono y texto */
+    margin-right: 0.5rem;
 }
 
 /* Introducción */
@@ -105,6 +107,7 @@ main {
     font-size: 2rem;
     color: #0056a6;
 }
+
 .intro span {
     color: #0078d4;
 }
@@ -115,12 +118,15 @@ form {
     flex-direction: column;
     gap: 1rem;
 }
-form input, form textarea {
+
+form input,
+form textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 form button {
     padding: 0.8rem;
     background-color: #0078d4;
@@ -129,52 +135,30 @@ form button {
     border-radius: 4px;
     cursor: pointer;
 }
+
 form button:hover {
     background-color: #0056a6;
 }
 
-/* Barra Lateral */
-.sidebar {
-    background-color: #f3f3f3;
-    padding: 1.5rem;
-    position: fixed; /* Mantiene la barra lateral fija */
-    left: 0;
-    top: 70px; /* Ajusta este valor a la altura de tu navbar */
-    width: 250px;
-    height: calc(100% - 70px); /* Ajusta la altura para que no se superponga a la barra de navegación */
-    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-.sidebar h3 {
-    color: #0056a6;
-}
-.sidebar ul {
+/* Contacto y enlaces */
+#contact-info ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-/* Estilo General para Enlaces */
-.sidebar a {
-    color: #0077cc; /* Azul agradable */
-    text-decoration: none; /* Sin subrayado */
-    display: flex; /* Para alinear icono y texto */
-    align-items: center; /* Centrar verticalmente el icono y el texto */
-    padding: 0.5rem 0; /* Espaciado alrededor del enlace */
-    transition: color 0.3s, transform 0.3s; /* Efecto suave al pasar el ratón */
+#contact-info ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-/* Efecto al pasar el ratón */
-.sidebar a:hover {
-    color: #005999; /* Un tono más oscuro al pasar el ratón */
-    transform: translateX(5px); /* Desplazamiento hacia la derecha */
+#contact-info a {
+    text-decoration: none;
+    color: #007bff;
 }
 
-/* Iconos de Font Awesome */
-.sidebar a i {
-    margin-right: 8px; /* Espacio entre el icono y el texto */
-    font-size: 1.2rem; /* Tamaño del icono */
+#contact-info a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -185,54 +169,62 @@ footer {
     color: #ffffff;
 }
 
-/* Media Query para dispositivos móviles (pantallas menores a 768px) */
-@media (max-width: 768px) {
-    .navbar{
-        display: none;
-    }
-    .navbar ul {
-        display: none;
-        flex-direction: column; /* Cambiar a columna para la navegación */
-        align-items: center; /* Centrar los enlaces */
-    }
+/* Media Queries */
 
-    .sidebar {
-        display: none; /* Ocultar la barra lateral en móviles */
+/* Para pantallas menores a 768px */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Ocultar la barra de navegación */
     }
 
     .section {
-        padding: 1rem; /* Reducir el padding en secciones */
+        padding: 1rem;
     }
 
-    .skills-list, .soft-skills-list {
-        flex-direction: column; /* Cambiar a columna para las listas de habilidades */
-        align-items: center; /* Centrar ítems en la lista */
+    .skills-list,
+    .soft-skills-list {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .skills-list li, .soft-skills-list li {
-        width: auto; /* Ajustar el ancho a automático */
-        text-align: center; /* Centrar texto */
+    .skills-list li,
+    .soft-skills-list li {
+        width: auto;
+        text-align: center;
     }
 
-    /* Estilos del formulario */
-    form input, form textarea {
-        padding: 0.6rem; /* Reducir padding */
+    form input,
+    form textarea {
+        padding: 0.6rem;
     }
 
     form button {
-        padding: 0.6rem; /* Reducir padding en el botón */
+        padding: 0.6rem;
     }
 }
 
-/* Media Query para tabletas (pantallas entre 768px y 1024px) */
+/* Para pantallas entre 768px y 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
     .navbar ul {
-        flex-direction: column; /* Mantener fila para navegación */
-        justify-content: space-around; /* Espaciado entre enlaces */
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    .sidebar {
-        width: 200px; /* Ajustar el ancho de la barra lateral */
-        display: block; /* Asegurarse de que se muestre en tabletas */
+    .section {
+        max-width: 90%;
+    }
+
+    .skills-list,
+    .soft-skills-list {
+        gap: 0.5rem;
+    }
+
+    form input,
+    form textarea {
+        padding: 0.7rem;
+    }
+
+    form button {
+        padding: 0.7rem;
     }
 }
