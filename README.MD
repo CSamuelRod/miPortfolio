@@ -1,5 +1,3 @@
-Samuel - Portfolio 
-
 ¡Bienvenido/a a mi portafolio web! Este proyecto está diseñado para presentar mis habilidades y proyectos en desarrollo web y programación. Espero que te ayude a conocer un poco más sobre mí y lo que puedo aportar a tu equipo.
 📋 Descripción
 
