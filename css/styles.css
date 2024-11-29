@@ -188,6 +188,7 @@ footer {
 /* Media Query para dispositivos móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
     .navbar ul {
+        display: none;
         flex-direction: column; /* Cambiar a columna para la navegación */
         align-items: center; /* Centrar los enlaces */
     }
@@ -223,7 +224,7 @@ footer {
 /* Media Query para tabletas (pantallas entre 768px y 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .navbar ul {
-        flex-direction: row; /* Mantener fila para navegación */
+        flex-direction: column; /* Mantener fila para navegación */
         justify-content: space-around; /* Espaciado entre enlaces */
     }
 
