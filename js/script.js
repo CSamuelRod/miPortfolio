@@ -26,7 +26,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     emailjs.send("service_ok6tkmm", "template_mevefb9", templateParams)
         .then(function (response) {
             console.log("Correo enviado exitosamente!", response.status, response.text);
-            formStatus.innerText = "¡Mensaje enviado exitosamente! 🎉";
+            formStatus.innerText = "¡Mensaje enviado!🎉 Me pondre en contacto contigo proximamente.";
             document.getElementById("contact-form").reset(); // Reinicia el formulario
         })
         .catch(function (error) {
